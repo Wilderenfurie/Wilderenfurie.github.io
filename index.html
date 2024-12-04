@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <title>Tour d'ivoire</title>
+    <meta charset="UTF-8">
+    </head>
+    <header>
+        <h1 class="page_title">La Tour d'Ivoire </h1>
+        <h2 class="page_title">Recommendations Livres de fantasy</h2>
+    </header>
+    <body>
+        <div class="container">
+            <br/>
+            <h3>Aujourd'hui je vous propose 4 séries littéraire de grandes qualités:</h3>
+            <br/>
+            <div class="btn-group btn-group-lg">
+                <button type="button" class="btn btn-outline-info" onclick="getMyResume('Belgariade')">La Belgariade</button>
+                <button type="button" class="btn btn-outline-info" onclick="getMyResume('Assassin')">L'Assassin Royal</button>
+                <button type="button" class="btn btn-outline-info" onclick="getMyResume('Blood')">Blood Song</button>
+                <button type="button" class="btn btn-outline-info" onclick="getMyResume('Martyrs')">Le Livre Des Martyrs</button>
+            </div>
+            
+            <article class="article">
+                <br/>
+                <h4 id="livre_name"></h4>
+                <br/>
+                <img id="livre_image" src=""/>
+                <br/>
+                <br/>
+                <p id="livre_resume"></p>
+            </article>
+        </div>
+    </body> 
+    <script>
+        function getMyResume(livre) {
+            if (livre == 'Belgariade'){
+                var livre = document.getElementById("livre_name")
+                livre.innerHTML="La Belgariade"
+                var image =  document.getElementById("livre_image")
+                image.src="belgariade.jpg"
+                var resume = document.getElementById("livre_resume")
+                resume.innerHTML="L'histoire tourne autour d'un petit groupe de personnages extrêmement attachants, menés par Belgarath le Sorcier, qui ont un seul objectif : retrouver l'Orbe d'Aldur avant qu'elle ne tombe entre les mains du traître Torak, ce qui lui permettrait de dominer les Royaumes de l'Ouest."
+
+            }
+            else if(livre == 'Assassin'){
+                var livre = document.getElementById("livre_name")
+                livre.innerHTML="L'Assassin Royal"
+                var image =  document.getElementById("livre_image")
+                image.src="assassin.jpg"
+                var resume = document.getElementById("livre_resume")
+                resume.innerHTML="Au royaume des Six-Duchés, le prince Chevalerie, de la famille régnante des Loinvoyant, renonce à devenir roi-servant le jour où il apprend l’existence de Fitz, son fils illégitime. Le bâtard grandit à Castelcerf, sous l’autorité de Burrich, le maître d’écurie. Mais le roi Subtil exige que Fitz reçoive une éducation princière. L’enfant découvre bientôt que le dessein du monarque est tout autre : faire de lui un assassin au service du pouvoir. Et tandis que les attaques des Pirates rouges mettent la contrée en péril, Fitz va constater à chaque instant que sa vie ne tient qu’à un fil : celui de sa lame."
+
+            }
+            else if(livre == 'Blood'){
+                var livre = document.getElementById("livre_name")
+                livre.innerHTML="Blood Song"
+                var image =  document.getElementById("livre_image")
+                image.src="bloodsong.jpg"
+                var resume = document.getElementById("livre_resume")
+                resume.innerHTML="Vaelin Al Sorna, héros légendaire du Royaume Unifié, accomplit son dernier voyage. Sur le navire qui l'emmène vers sa condamnation, il raconte à un jeune chroniqueur impérial les événements qui l'ont conduit à cette tragique conclusion. Vaelin aurait dû succéder à son père, le célèbre Seigneur de Guerre, mais il était promis à un autre destin. Confronté dès l'enfance au quotidien rude d'un combattant de la Foi, il n'aura désormais pour seule famille que l'Ordre qui l'a recueilli dans ses rangs."
+
+            }
+            else if(livre == 'Martyrs'){
+                var livre =  document.getElementById("livre_name")
+                livre.innerHTML="Le Livre Des Martyrs"
+                var image =  document.getElementById("livre_image")
+                image.src="martyrs.jpg"
+                var resume = document.getElementById("livre_resume")
+                resume.innerHTML="Saigné à blanc par des luttes intestines, d’interminables guerres et plusieurs confrontations sanglantes avec le Seigneur Anomander Rake et ses Tistes Andii, le tentaculaire Empire Malazéen frémit de mécontentement. Les légions impériales elles-mêmes aspirent à un peu de répit. Pour le sergent Mésangeai et ses Brûleurs de Ponts, ainsi que pour Loquevoile, seule sorcière survivante de la 2e armée, les contrecoups du siège de Pale auraient dû représenter un temps de deuil. Mais Darujhistan, la dernière des Villes libres de Genabackis, tient encore et toujours bon et l’ambition de l’Impératrice Laseen ne connaît aucune limite. Cependant, il semble que l’Empire ne soit pas la seule puissance impliquée. De sinistres forces sont à l’œuvre dans l’ombre, tandis que les dieux eux-mêmes se préparent à abattre leurs cartes…"
+
+            }
+        }
+    </script>
+    <footer>
+    </footer>
+</html>
